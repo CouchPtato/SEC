@@ -1,7 +1,10 @@
-text = input("Enter a string: ")
-char_count = {}
+n = int(input("Enter a number less than 4000000: "))
+a, b = 1, 2
+total = 0
+while b <= n <= 4000000:
+    if b % 2 == 0:
+        total += b
+    b = a + b
+    a = b
 
-for char in text:
-    char_count[char] = char_count.get(char, 0) + 1
-
-print(char_count)
+print("Sum of even Fibonacci terms till", n, ": ", total)

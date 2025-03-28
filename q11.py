@@ -1,8 +1,7 @@
-birthdays = {"Alice": "2000-06-15", "Bob": "1998-02-22"}
-name = input("Enter name: ")
-print("Birthday:", birthdays.get(name, "Not found"))
+text = input("Enter a string: ")
+char_count = {}
 
-sentence = "Hello world, Python is great"
-words = sentence.split()
-print("Split words:", words)
-print("Joined sentence:", " ".join(words))
+for char in text:
+    char_count[char] = char_count.get(char, 0) + 1
+
+print(char_count)

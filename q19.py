@@ -1,4 +1,7 @@
-def find_dups(lst):
-    return list(set(x for x in lst if lst.count(x) > 1))
+def nearly_equal(a, b):
+    if len(a) != len(b):
+        return False
+    return sum(1 for x, y in zip(a, b) if x != y) == 1
 
-print(find_dups([1, 2, 3, 4, 2, 3, 5]))  # [2, 3]
+print(nearly_equal("Somay", "Samay"))  # True
+print(nearly_equal("Somay", "Abhay"))  # False

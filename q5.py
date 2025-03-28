@@ -1,2 +1,5 @@
-for i in [2, 3, 4, 10]:
-    print(f"1/{i} = {1/i}")
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")

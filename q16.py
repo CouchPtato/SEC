@@ -1,8 +1,9 @@
-import math
+filename = input("Enter filename: ")
+with open(filename, "r") as file:
+    text = file.read()
 
-def ball_collide(ball1, ball2):
-    x1, y1, r1 = ball1
-    x2, y2, r2 = ball2
-    return math.dist((x1, y1), (x2, y2)) <= (r1 + r2)
+char_count = len(text)
+word_count = len(text.split())
+line_count = text.count("\n") + 1
 
-print(ball_collide((0, 0, 3), (4, 0, 3)))  # True
+print(f"Characters: {char_count}, Words: {word_count}, Lines: {line_count}")
